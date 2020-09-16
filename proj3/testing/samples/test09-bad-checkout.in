@@ -1,0 +1,50 @@
+D DATE "Date: \w\w\w \w\w\w \d+ \d\d:\d\d:\d\d \d\d\d\d [-+]\d\d\d\d"
+D COMMIT_HEAD "commit ([a-f0-9]+)[ \t]*\n(?:Merge:\s+[0-9a-f]{7}\s+[0-9a-f]{7}[ ]*\n)?${DATE}"
+D COMMIT_LOG "(===[ ]*\ncommit [a-f0-9]+[ ]*\n(?:Merge:\s+[0-9a-f]{7}\s+[0-9a-f]{7}[ ]*\n)?${DATE}[ ]*\n(?:.|\n)*?(?=\Z|\n===))"
+D ARBLINE "[^\n]*(?=\n|\Z)"
+D ARBLINES "(?:(?:.|\n)*(?:\n|\Z)|\A|\Z)"
+> init
+<<<
++ wug.txt wug.txt
+> add wug.txt
+<<<
+> commit "ver.1"
+<<<
++ wug.txt notwug.txt
+> add wug.txt
+<<<
+> commit "ver.2"
+<<<
+> log
+===
+${COMMIT_HEAD}
+ver.2
+
+===
+${COMMIT_HEAD}
+ver.1
+
+===
+${COMMIT_HEAD}
+initial commit
+
+<<<*
+# UID of second version
+D UID2 "${1}"
+# UID of current version
+D UID1 "${2}"
+> checkout ${UID2} -- wau.txt
+File does not exist in that commit.
+<<<
+> checkout 025052f2b193d417df998517a4c539918801b430 -- wug.txt
+No commit with that id exists.
+<<<
+> checkout ${UID2} ++ wug.txt
+Incorrect operands.
+<<<
+> checkout foobar
+No such branch exists.
+<<<
+> checkout master
+No need to checkout the current branch.
+<<<

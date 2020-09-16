@@ -1,0 +1,37 @@
+#* java -ea tablut.Main
+manual white
+seed 199485
+f1-3
+d5-6
+d1-5
+e6-h
+i4-f
+e4-d
+b5-d
+d6-c
+f9-6
+c6-d
+a5-d
+d6-c
+a4-5
+c6-d
+a5-d
+d6-c
+d9-6
+e7-6
+a6-5
+e6-d
+a5-d
+c6-5
+e1-b
+e3-b
+b1-a
+b3-a
+a1-b
+c5-b
+b1-c
+e5-c
+limit 20
+auto white
+auto black
+

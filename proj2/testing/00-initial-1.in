@@ -1,0 +1,5 @@
+#* java -ea tablut.Main
+# Check that initial board is right.
+#*time 180 180
+dump
+quit

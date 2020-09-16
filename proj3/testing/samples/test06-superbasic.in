@@ -1,0 +1,15 @@
+# An examination of add in a really fundamental way. Adds a copy of the file as it currently exists to the staging area (see the description of the commit command)
+> init
+<<<
+> add spectacularforexample
+File does not exist.
+<<<
+> add professionalclassicfantastic
+File does not exist.
+<<<
+> add chaojibangbangtangzhuzhuxia
+File does not exist.
+<<<
+> commit "nishiyitoudashabi"
+No changes added to the commit.
+<<<

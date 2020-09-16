@@ -1,0 +1,15 @@
+#* java -ea tablut.Main
+# Check that win can be achieved
+manual white
+manual black
+d1-c
+d5-4
+c1-2
+e5-d
+c2-4
+d5-8
+f1-i
+d8-c
+dump
+auto white
+e2-h

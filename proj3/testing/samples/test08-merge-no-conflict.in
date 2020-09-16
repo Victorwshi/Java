@@ -1,0 +1,18 @@
+D DATE "Date: \w\w\w \w\w\w \d+ \d\d:\d\d:\d\d \d\d\d\d [-+]\d\d\d\d"
+D COMMIT_HEAD "commit ([a-f0-9]+)[ \t]*\n(?:Merge:\s+[0-9a-f]{7}\s+[0-9a-f]{7}[ ]*\n)?${DATE}"
+D COMMIT_LOG "(===[ ]*\ncommit [a-f0-9]+[ ]*\n(?:Merge:\s+[0-9a-f]{7}\s+[0-9a-f]{7}[ ]*\n)?${DATE}[ ]*\n(?:.|\n)*?(?=\Z|\n===))"
+D ARBLINE "[^\n]*(?=\n|\Z)"
+D ARBLINES "(?:(?:.|\n)*(?:\n|\Z)|\A|\Z)"
+> init
+<<<
++ wug.txt wug.txt
++ wug2.txt notwug.txt
+> add wug2.txt
+<<<
+> add wug.txt
+<<<
+> commit "2"
+<<<
+> branch other
+<<<
+

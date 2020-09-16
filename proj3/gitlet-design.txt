@@ -1,0 +1,25 @@
+Gitlet Design Document
+----------------------
+
+
+Classes and Data Structures
+---------------------------
+Commits
+Branches
+Command Interface
+Gitlet
+
+One command one class implements command interface.
+
+
+Algorithms
+----------
+HashMap
+ArrayList
+List
+Set
+
+
+
+Persistence
+-----------

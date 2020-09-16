@@ -1,0 +1,7 @@
+# To check basic checkout through a very very basic method.
+> init
+<<<
+> commit "added wug"
+No changes added to the commit.
+<<<
+

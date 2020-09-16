@@ -1,0 +1,7 @@
+# An examination of checkout in a really fundamental way.
+> init
+<<<
+> commit "added wug"
+No changes added to the commit.
+<<<
+

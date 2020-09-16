@@ -1,0 +1,44 @@
+# Check log.
+> init
+<<<
++ wug.txt wug.txt
+> add wug.txt
+<<<
+> commit "add wug.txt"
+<<<
+D HEADER "commit [a-f0-9]+"
+D DATE "Date: \w\w\w \w\w\w \d+ \d\d:\d\d:\d\d \d\d\d\d [-+]\d\d\d\d"
+> log
+===
+${HEADER}
+${DATE}
+add wug.txt
+
+===
+${HEADER}
+${DATE}
+initial commit
+
+<<<*
++ wug2.txt notwug.txt
+> add wug2.txt
+<<<
+> commit "add wug2.txt"
+<<<
+> log
+===
+${HEADER}
+${DATE}
+add wug2.txt
+
+===
+${HEADER}
+${DATE}
+add wug.txt
+
+===
+${HEADER}
+${DATE}
+initial commit
+
+<<<*
